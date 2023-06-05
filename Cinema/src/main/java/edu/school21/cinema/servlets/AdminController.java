@@ -52,15 +52,8 @@ public class AdminController {
 
     @GetMapping("/admin/halls/{id}")
     public String editHalls(@PathVariable("id") String id, Model model) {
-//        try {
-//            if (movieHallService.getMovieHallById(Long.parseLong(id)) != null) {
-                model.addAttribute("movieHall", movieHallService.getMovieHallById(Long.parseLong(id)));
-                return "/admin/editHall";
-//            }
-//            return "/error/error";
-//        } catch (Exception e) {
-//            return "/error/error";
-//        }
+        model.addAttribute("movieHall", movieHallService.getMovieHallById(Long.parseLong(id)));
+        return "/admin/editHall";
     }
 
     @PostMapping("/admin/halls/{id}/delete")
