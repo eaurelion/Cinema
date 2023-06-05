@@ -1,0 +1,75 @@
+header {
+    background-color: #181258;
+    margin: 0;
+    padding: 5px;
+}
+
+.header {
+    color: white;
+    text-align: center;
+}
+
+a.header {
+    color: #9E9C9C;
+}
+
+div.main {
+}
+
+a.main {
+    color: aliceblue;
+    font-family: "Times New Roman", serif;
+    font-size: 300%;
+    text-decoration: #A3D0C3;
+    text-align:center;
+    display:block;
+}
+
+form {
+    text-align: center;
+}
+
+label {
+    color: white;
+    font-size: large;
+}
+
+button {
+    width: 10%;
+}
+
+h1.main {
+    color: white;
+    text-align: center;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    background-color: black;
+    position:fixed;
+    left:0;
+    bottom:0;
+    width:100%;
+}
+
+footer h2 {
+    text-align: center;
+    color: black;
+}
+
+h2.footer {
+    margin: 1%;
+    color: white;
+}
+
+html, body {
+    background-image: url("/img/van_gog.webp");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
