@@ -29,19 +29,14 @@ public class CinemaSecurityConfig extends WebSecurityConfigurerAdapter {
                 .cors()
                 .disable()
                 .authorizeRequests()
-                //Доступ только для пользователей с ролью Администратор
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/auth/profile", "/auth/profile/**").authenticated()
-                //Доступ разрешен всем пользователей
                 .antMatchers("/", "/img/**", "/js/**", "/css/**", "/sessions/**", "/films", "/films/**/image").permitAll()
                 .antMatchers("/auth/register", "/auth/login").permitAll()
-                //Все остальные страницы требуют аутентификации
                 .anyRequest().authenticated()
                 .and()
-                //Настройка для входа в систему
                 .formLogin()
                 .loginPage("/auth/login")
-                //Перенаправление на главную страницу после успешного входа
                 .defaultSuccessUrl("/auth/profile")
                 .permitAll()
                 .and()
